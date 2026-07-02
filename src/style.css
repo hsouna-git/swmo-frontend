@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f7f8fb;
+  color: #1f2937;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f7f8fb;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  font-weight: 600;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+#app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.user-panel {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.products,
+.orders {
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.product-card,
+.order-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+.product-card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.product-card p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.25rem;
+  gap: 1rem;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quantity-controls button {
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #e5e7eb;
+  color: #111827;
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+}
+
+.quantity-controls span {
+  min-width: 1.75rem;
+  text-align: center;
+}
+
+.order-summary {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+.order-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.order-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #374151;
+}
+
+.hint {
+  margin-top: 0.75rem;
+  color: #6b7280;
+}
+
+@media (max-width: 700px) {
+  .topbar { flex-direction: column; align-items: flex-start }
+  .product-grid { grid-template-columns: 1fr }
+}
