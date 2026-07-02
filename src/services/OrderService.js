@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export class OrderService {
-  constructor(baseUrl = 'http://localhost:9099') {
+  constructor(baseUrl = 'https://swmo-backend-production.up.railway.app') {
     this.baseUrl = baseUrl
   }
 
