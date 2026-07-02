@@ -16,7 +16,7 @@ export class AuthService {
 
   async init() {
     const authenticated = await this.keycloak.init({
-      onLoad: 'login-required',
+      onLoad: 'login-required', //au lieu d'utiliser les guard
       pkceMethod: 'S256',
       checkLoginIframe: false
     })
